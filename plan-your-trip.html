@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip | Taniti Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+<header>
+    <nav>
+
+        <div class="logo">Taniti</div>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="primary-navigation">
+            <a href="index.html">Home</a>
+            <a href="plan-your-trip.html" class="active">Plan Your Trip</a>
+            <a href="about.html">About Taniti</a>
+        </div>
+
+    </nav>
+</header>
+
+<main class="trip-page">
+    <section class="planner-masthead">
+        <div class="planner-masthead-copy">
+            <p class="eyebrow">YOUR TANITI TRAVEL SPECIALIST</p>
+            <h1>Make this island yours.</h1>
+            <p>Choose your dates, find your stay, and bring the whole trip together in one place.</p>
+        </div>
+        <div class="planner-masthead-image" role="img" aria-label="Aerial view of a tropical island surrounded by turquoise water"></div>
+    </section>
+
+    <section class="trip-search-section" aria-label="Trip dates and travelers">
+        <form class="trip-search" id="trip-details">
+            <label>
+                Leaving from
+                <input id="origin" name="origin" type="text" value="Honolulu (HNL)" autocomplete="off">
+            </label>
+            <label>
+                Check in
+                <input id="arrival-date" name="arrival" type="date" required>
+            </label>
+            <label>
+                Check out
+                <input id="departure-date" name="departure" type="date" required>
+            </label>
+            <label>
+                Travelers
+                <select id="traveler-count" name="travelers">
+                    <option value="1">1 traveler</option>
+                    <option value="2" selected>2 travelers</option>
+                    <option value="3">3 travelers</option>
+                    <option value="4">4 travelers</option>
+                    <option value="5">5 travelers</option>
+                    <option value="6">6 travelers</option>
+                </select>
+            </label>
+            <button class="btn" type="submit">Update trip</button>
+        </form>
+        <p class="trip-search-note" id="date-status" aria-live="polite">Choose your dates to see an updated trip estimate.</p>
+    </section>
+
+    <nav class="planner-shortcuts" aria-label="Trip planning sections">
+        <a href="#flights">Flights</a>
+        <a href="#lodging">Places to stay</a>
+        <a href="#cars">Rental cars</a>
+        <a href="#dining">Restaurants</a>
+        <a href="#experiences">Experiences</a>
+    </nav>
+
+    <div class="planner-layout">
+        <div class="planner-options">
+            <section class="planner-section" id="transportation">
+                <div class="planner-section-heading">
+                    <div>
+                        <p class="eyebrow">01 / GETTING HERE</p>
+                        <h2>Find a flight</h2>
+                        <p>Sample round-trip fares from <span id="flight-origin">Honolulu (HNL)</span>.</p>
+                    </div>
+                    <span class="section-meta" id="flight-date-range"></span>
+                </div>
+                <div class="option-grid">
+                    <article class="option-card">
+                        <div class="option-card-body">
+                            <span class="option-tag">NONSTOP</span>
+                            <h3>Island Air</h3>
+                            <p class="option-route">HNL <span>5h 20m</span> TNI</p>
+                            <p>Round trip · one personal item included</p>
+                            <p class="option-price">$684 <span>/ traveler</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="flight" data-id="island-air" data-name="Island Air nonstop" data-detail="Round trip · nonstop" data-price="684" data-rate="person" aria-pressed="false">Choose flight</button>
+                    </article>
+                    <article class="option-card">
+                        <div class="option-card-body">
+                            <span class="option-tag option-tag-muted">ONE STOP</span>
+                            <h3>Pacific Connect</h3>
+                            <p class="option-route">HNL <span>8h 10m</span> TNI</p>
+                            <p>Round trip · one stop in the Pacific</p>
+                            <p class="option-price">$512 <span>/ traveler</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="flight" data-id="pacific-connect" data-name="Pacific Connect" data-detail="Round trip · one stop" data-price="512" data-rate="person" aria-pressed="false">Choose flight</button>
+                    </article>
+                </div>
+            </section>
+
+            <section class="planner-section" id="lodging">
+                <div class="planner-section-heading">
+                    <div>
+                        <p class="eyebrow">02 / MAKE YOURSELF AT HOME</p>
+                        <h2>Choose your stay</h2>
+                        <p>From breezy beachfront mornings to a quiet rainforest hideaway.</p>
+                    </div>
+                    <span class="section-meta" id="stay-night-count"></span>
+                </div>
+                <div class="option-grid">
+                    <article class="option-card stay-card">
+                        <div class="option-photo stay-photo-coast" role="img" aria-label="Palm-lined island beach"></div>
+                        <div class="option-card-body">
+                            <span class="option-tag">TANITI CITY</span>
+                            <h3>Seabreeze Hotel</h3>
+                            <p>Steps from the beach · breakfast included</p>
+                            <p class="option-price">$218 <span>/ night</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="stay" data-id="seabreeze" data-name="Seabreeze Hotel" data-detail="Taniti City · breakfast included" data-price="218" data-rate="night" aria-pressed="false">Choose stay</button>
+                    </article>
+                    <article class="option-card stay-card">
+                        <div class="option-photo stay-photo-garden" role="img" aria-label="Tropical garden bungalow"></div>
+                        <div class="option-card-body">
+                            <span class="option-tag">MERRITON LANDING</span>
+                            <h3>Lantern House</h3>
+                            <p>Small locally owned inn · courtyard pool</p>
+                            <p class="option-price">$164 <span>/ night</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="stay" data-id="lantern-house" data-name="Lantern House" data-detail="Merriton Landing · courtyard pool" data-price="164" data-rate="night" aria-pressed="false">Choose stay</button>
+                    </article>
+                    <article class="option-card stay-card">
+                        <div class="option-photo stay-photo-rainforest" role="img" aria-label="A secluded cabin among tropical trees"></div>
+                        <div class="option-card-body">
+                            <span class="option-tag">RAINFOREST EDGE</span>
+                            <h3>Canopy Lodge</h3>
+                            <p>Trail access · private verandah</p>
+                            <p class="option-price">$132 <span>/ night</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="stay" data-id="canopy-lodge" data-name="Canopy Lodge" data-detail="Rainforest edge · private verandah" data-price="132" data-rate="night" aria-pressed="false">Choose stay</button>
+                    </article>
+                </div>
+            </section>
+
+            <section class="planner-section" id="cars">
+                <div class="planner-section-heading">
+                    <div>
+                        <p class="eyebrow">03 / GET AROUND</p>
+                        <h2>Reserve a rental car</h2>
+                        <p>Pick up at Taniti International Airport. Rates are per day.</p>
+                    </div>
+                </div>
+                <div class="option-grid option-grid-compact">
+                    <article class="option-card compact-option">
+                        <div class="option-card-body">
+                            <span class="option-tag">2 SEATS · AUTOMATIC</span>
+                            <h3>Coastal Mini</h3>
+                            <p>Easy parking · air conditioning</p>
+                            <p class="option-price">$46 <span>/ day</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="car" data-id="coastal-mini" data-name="Coastal Mini" data-detail="2 seats · automatic" data-price="46" data-rate="day" aria-pressed="false">Choose car</button>
+                    </article>
+                    <article class="option-card compact-option">
+                        <div class="option-card-body">
+                            <span class="option-tag">5 SEATS · AUTOMATIC</span>
+                            <h3>Island Cruiser</h3>
+                            <p>Room for bags · higher ground clearance</p>
+                            <p class="option-price">$72 <span>/ day</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="car" data-id="island-cruiser" data-name="Island Cruiser" data-detail="5 seats · automatic" data-price="72" data-rate="day" aria-pressed="false">Choose car</button>
+                    </article>
+                </div>
+            </section>
+
+            <section class="planner-section" id="dining">
+                <div class="planner-section-heading">
+                    <div>
+                        <p class="eyebrow">04 / A TABLE FOR YOU</p>
+                        <h2>Explore restaurants</h2>
+                        <p>Choose a place and a time to add a dinner idea to your itinerary.</p>
+                    </div>
+                </div>
+                <div class="option-grid">
+                    <article class="option-card compact-option">
+                        <div class="option-card-body">
+                            <span class="option-tag">LOCAL FAVORITE</span>
+                            <h3>Harbor &amp; Palm</h3>
+                            <p>Island fish · harbor-view patio</p>
+                            <label class="time-choice">Suggested time
+                                <select data-reservation-time>
+                                    <option>5:30 PM</option><option>6:30 PM</option><option>7:30 PM</option>
+                                </select>
+                            </label>
+                            <p class="option-price">About $38 <span>/ person</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="dining" data-id="harbor-palm" data-name="Harbor &amp; Palm" data-detail="Local fish · harbor-view patio" data-price="38" data-rate="person" aria-pressed="false">Add dinner idea</button>
+                    </article>
+                    <article class="option-card compact-option">
+                        <div class="option-card-body">
+                            <span class="option-tag">PAN-ASIAN</span>
+                            <h3>Ginger Tide</h3>
+                            <p>Noodles and bright island flavors</p>
+                            <label class="time-choice">Suggested time
+                                <select data-reservation-time>
+                                    <option>5:30 PM</option><option>6:30 PM</option><option>7:30 PM</option>
+                                </select>
+                            </label>
+                            <p class="option-price">About $29 <span>/ person</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="dining" data-id="ginger-tide" data-name="Ginger Tide" data-detail="Pan-Asian · relaxed dining room" data-price="29" data-rate="person" aria-pressed="false">Add dinner idea</button>
+                    </article>
+                    <article class="option-card compact-option">
+                        <div class="option-card-body">
+                            <span class="option-tag">CASUAL</span>
+                            <h3>Volcano Table</h3>
+                            <p>Family recipes · open-air tables</p>
+                            <label class="time-choice">Suggested time
+                                <select data-reservation-time>
+                                    <option>5:30 PM</option><option>6:30 PM</option><option>7:30 PM</option>
+                                </select>
+                            </label>
+                            <p class="option-price">About $24 <span>/ person</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="dining" data-id="volcano-table" data-name="Volcano Table" data-detail="Local recipes · open-air tables" data-price="24" data-rate="person" aria-pressed="false">Add dinner idea</button>
+                    </article>
+                </div>
+            </section>
+
+            <section class="planner-section" id="experiences">
+                <div class="planner-section-heading">
+                    <div>
+                        <p class="eyebrow">05 / MAKE A MEMORY</p>
+                        <h2>Add an experience</h2>
+                        <p>Leave room for a little island adventure.</p>
+                    </div>
+                </div>
+                <div class="option-grid">
+                    <article class="option-card compact-option">
+                        <div class="option-card-body">
+                            <span class="option-tag">HALF DAY</span>
+                            <h3>Rainforest trail guide</h3>
+                            <p>A local guide leads an easy morning walk.</p>
+                            <p class="option-price">$58 <span>/ person</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="experience" data-id="rainforest-walk" data-name="Rainforest trail guide" data-detail="Half-day guided walk" data-price="58" data-rate="person" aria-pressed="false">Add experience</button>
+                    </article>
+                    <article class="option-card compact-option">
+                        <div class="option-card-body">
+                            <span class="option-tag">ON THE WATER</span>
+                            <h3>Reef and coast sail</h3>
+                            <p>Small-group sailing and a quiet swim stop.</p>
+                            <p class="option-price">$86 <span>/ person</span></p>
+                        </div>
+                        <button class="btn option-button" type="button" data-kind="experience" data-id="coast-sail" data-name="Reef and coast sail" data-detail="Small-group sailing · swim stop" data-price="86" data-rate="person" aria-pressed="false">Add experience</button>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <aside class="trip-summary" aria-labelledby="summary-title">
+            <div class="summary-heading">
+                <div>
+                    <p class="eyebrow">YOUR GETAWAY</p>
+                    <h2 id="summary-title">Trip itinerary</h2>
+                </div>
+                <span class="saved-indicator" id="saved-indicator">SAVED HERE</span>
+            </div>
+            <div class="summary-trip-meta">
+                <p><span>Dates</span><strong id="summary-dates">Choose your dates</strong></p>
+                <p><span>Travelers</span><strong id="summary-travelers">2 travelers</strong></p>
+            </div>
+            <div class="summary-items-wrap">
+                <h3>Your selections</h3>
+                <p class="summary-empty" id="summary-empty">Your itinerary is waiting for its first adventure.</p>
+                <ul class="summary-items" id="summary-items"></ul>
+            </div>
+            <div class="summary-total-row">
+                <span>Estimated trip total</span>
+                <strong id="summary-total">$0</strong>
+            </div>
+            <p class="summary-disclaimer">Sample estimates only. This prototype does not place reservations or charge payment.</p>
+            <button class="btn summary-review" id="review-trip" type="button" disabled>Review itinerary</button>
+            <button class="summary-clear" id="clear-trip" type="button">Clear selections</button>
+            <p class="summary-status" id="summary-status" aria-live="polite"></p>
+        </aside>
+    </div>
+</main>
+
+<dialog class="review-dialog" id="review-dialog" aria-labelledby="review-title">
+    <div class="review-dialog-content">
+        <p class="eyebrow">READY WHEN YOU ARE</p>
+        <h2 id="review-title">Your Taniti itinerary</h2>
+        <p id="review-dates"></p>
+        <ul id="review-items"></ul>
+        <p class="review-note">This is a planning prototype. No flights, rooms, restaurant tables, or vehicles have been booked.</p>
+        <div class="review-actions">
+            <button class="btn" id="close-review" type="button">Back to planning</button>
+            <button class="btn btn-secondary" id="print-itinerary" type="button">Print itinerary</button>
+        </div>
+    </div>
+</dialog>
+
+<footer>
+
+    <h3>Taniti Tourism</h3>
+
+    <br>
+
+    <a href="index.html">Home</a>
+    <a href="plan-your-trip.html">Plan Your Trip</a>
+    <a href="about.html">About Taniti</a>
+
+    <br><br>
+
+    <p>&copy; 2026 Taniti Tourism</p>
+
+</footer>
+
+<script src="site.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taniti Tourism</title>
+
+    <link rel="stylesheet" href="styles.css">   
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Taniti</div>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="primary-navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="plan-your-trip.html">Plan Your Trip</a>
+            <a href="about.html">About Taniti</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Welcome to Taniti</h1>
+
+        <p>
+            Discover beautiful beaches, tropical rainforests,
+            local culture, and unforgettable experiences on
+            a unique Pacific island destination.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="plan-your-trip.html" class="btn">Plan Your Trip</a>
+            
+            </a>
+
+            <a href="about.html" class="btn">Learn More</a>
+                
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        Hero Image Placeholder
+    </div>
+</section>
+
+<section>
+    <h2>Explore Taniti</h2>
+
+    <p>
+        Discover natural beauty, outdoor activities,
+        and the island's unique culture.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <h3>Beaches</h3>
+                <p>Relax on sandy beaches and enjoy clear coastal waters.</p>
+                <button class="btn attraction-trigger" type="button" data-attraction-dialog="beaches-dialog" aria-haspopup="dialog" aria-controls="beaches-dialog">Explore Beaches</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <h3>Rainforest Adventures</h3>
+                <p>Explore Taniti's tropical rainforest and outdoor activities.</p>
+                <button class="btn attraction-trigger" type="button" data-attraction-dialog="rainforest-dialog" aria-haspopup="dialog" aria-controls="rainforest-dialog">Explore Rainforest</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <h3>Volcano & Sightseeing</h3>
+                <p>Visit the island's active volcano and scenic destinations.</p>
+                <button class="btn attraction-trigger" type="button" data-attraction-dialog="volcano-dialog" aria-haspopup="dialog" aria-controls="volcano-dialog">Explore Volcano</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <h3>Culture & History</h3>
+                <p>Learn about Taniti's culture, traditions, and history.</p>
+                <br><a href="about.html" class="btn">Explore Culture</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<dialog class="attraction-dialog" id="beaches-dialog" aria-labelledby="beaches-dialog-title">
+    <div class="attraction-dialog-layout">
+        <div class="attraction-dialog-image beaches-dialog-image" role="img" aria-label="White sand beach and turquoise water"></div>
+        <div class="attraction-dialog-copy">
+            <div class="attraction-dialog-heading">
+                <p class="eyebrow">COAST &amp; WATER</p>
+                <button class="dialog-close" type="button" aria-label="Close beaches information" title="Close">×</button>
+            </div>
+            <h2 id="beaches-dialog-title">Beaches of Yellow Leaf Bay</h2>
+            <p>Taniti’s coastline includes both sandy and rocky beaches. Near Taniti City, white sandy beaches encircle Yellow Leaf Bay, a popular area for visitors.</p>
+            <h3>Make a day of it</h3>
+            <ul>
+                <li>Choose between sandy shoreline and more rugged coastal stretches.</li>
+                <li>Snorkeling and chartered fishing tours are among the island’s water activities.</li>
+                <li>Taniti City is close to the bay, dining, and local architecture.</li>
+            </ul>
+            <a href="plan-your-trip.html#experiences" class="btn">Plan an island experience</a>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="attraction-dialog" id="rainforest-dialog" aria-labelledby="rainforest-dialog-title">
+    <div class="attraction-dialog-layout">
+        <div class="attraction-dialog-image rainforest-dialog-image" role="img" aria-label="Dense tropical rainforest canopy"></div>
+        <div class="attraction-dialog-copy">
+            <div class="attraction-dialog-heading">
+                <p class="eyebrow">GREEN ISLAND INTERIOR</p>
+                <button class="dialog-close" type="button" aria-label="Close rainforest information" title="Close">×</button>
+            </div>
+            <h2 id="rainforest-dialog-title">Into the rainforest</h2>
+            <p>Lush tropical rainforest covers part of Taniti’s varied terrain. Exploring the rainforest is one of the main reasons visitors come to the island.</p>
+            <h3>Ways to explore</h3>
+            <ul>
+                <li>Take a hike through the rainforest.</li>
+                <li>Try zip-lining for a different view of the forest.</li>
+                <li>Island boat and bus tours offer other ways to see Taniti.</li>
+            </ul>
+            <a href="plan-your-trip.html#experiences" class="btn">Plan an island experience</a>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="attraction-dialog" id="volcano-dialog" aria-labelledby="volcano-dialog-title">
+    <div class="attraction-dialog-layout">
+        <div class="attraction-dialog-image volcano-dialog-image" role="img" aria-label="Mountainous tropical island landscape"></div>
+        <div class="attraction-dialog-copy">
+            <div class="attraction-dialog-heading">
+                <p class="eyebrow">MOUNTAINOUS INTERIOR</p>
+                <button class="dialog-close" type="button" aria-label="Close volcano information" title="Close">×</button>
+            </div>
+            <h2 id="volcano-dialog-title">Visit Taniti’s volcano</h2>
+            <p>Taniti’s mountainous interior is home to a small active volcano. Visiting the volcano is one of the island’s popular sightseeing activities.</p>
+            <h3>Build it into your trip</h3>
+            <ul>
+                <li>Boat and bus tours travel around the island.</li>
+                <li>Rainforest hikes and helicopter rides are also available activities.</li>
+                <li>Check local attraction schedules before you go; many close on national holidays.</li>
+            </ul>
+            <a href="plan-your-trip.html#experiences" class="btn">Plan an island experience</a>
+        </div>
+    </div>
+</dialog>
+
+<section class="family-banner">
+    <h2>Planning a Family Vacation?</h2>
+
+    <p>
+        Discover activities, beaches, sightseeing, and cultural
+        experiences that families can enjoy during their visit.
+    </p>
+
+    <a href="plan-your-trip.html" class="btn">Plan Your Family Trip</a>
+    </a>
+</section>
+
+<section>
+    <h2>Plan Your Visit</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Transportation</h3>
+                <p>Find arrival and transportation information.</p>
+                <br><a href="plan-your-trip.html#transportation" class="btn">View Transportation</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Places to Stay</h3>
+                <p>Learn about hotels, resorts, hostels, and rentals.</p>
+                
+                <a href="plan-your-trip.html#lodging" class="btn">View Lodging</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Food & Dining</h3>
+                <p>Explore restaurants and grocery options.</p>
+                <br><a href="plan-your-trip.html#dining" class="btn">View Dining</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Need Visitor Information?</h2>
+
+    <p>
+        Find information about currency, language, weather,
+        safety, healthcare, and holiday closures.
+    </p>
+
+    <br>
+
+    <a href="about.html#visitor-info" class="btn">View Visitor Information</a>
+    </a>
+</section>
+
+<footer>
+    <p><strong>Taniti Tourism</strong></p>
+
+    <br>
+
+    <a href="index.html">Home</a>
+    <a href="plan-your-trip.html">Plan Your Trip</a>
+    <a href="about.html">About Taniti</a>
+
+    <br><br>
+
+    <p>&copy; 2026 Taniti Tourism</p>
+</footer>
+
+<script src="site.js"></script>
+
+</body>
+</html>
